@@ -1,0 +1,353 @@
+I, [2018-09-25T17:14:54.473405 #5879]  INFO -- : Registered expected interaction GET /accounts/available
+I, [2018-09-25T17:14:54.475147 #5879]  INFO -- : Registered expected interaction GET /accounts/1
+D, [2018-09-25T17:14:54.475759 #5879] DEBUG -- : {
+  "description": "a request for all accounts",
+  "providerState": "Has some accounts",
+  "request": {
+    "method": "GET",
+    "path": "/accounts/available"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 1
+        },
+        "first_name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "John"
+        },
+        "last_name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Doe"
+        },
+        "bank": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Lloyds"
+        },
+        "age": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 21
+        },
+        "gender": {
+          "json_class": "Pact::Term",
+          "data": {
+            "generate": "M",
+            "matcher": {"json_class":"Regexp","o":0,"s":"F|M"}
+          }
+        },
+        "location": {
+          "city": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "London"
+          },
+          "country": {
+            "json_class": "Pact::SomethingLike",
+            "contents": "UK"
+          },
+          "post_code": {
+            "json_class": "Pact::SomethingLike",
+            "contents": 3000
+          }
+        },
+        "eligibility": {
+          "available": {
+            "json_class": "Pact::SomethingLike",
+            "contents": true
+          },
+          "previously_married": {
+            "json_class": "Pact::SomethingLike",
+            "contents": false
+          }
+        },
+        "interests": {
+          "json_class": "Pact::ArrayLike",
+          "contents": "walks in the garden/meadow",
+          "min": 1
+        }
+      },
+      "min": 2
+    }
+  }
+}
+I, [2018-09-25T17:14:54.477106 #5879]  INFO -- : Registered expected interaction GET /accounts/100
+D, [2018-09-25T17:14:54.477406 #5879] DEBUG -- : {
+  "description": "a request for an account with ID 1",
+  "providerState": "Has an account with ID 1",
+  "request": {
+    "method": "GET",
+    "path": "/accounts/1"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "first_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "John"
+      },
+      "last_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Doe"
+      },
+      "bank": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Lloyds"
+      },
+      "age": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 21
+      },
+      "gender": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "M",
+          "matcher": {"json_class":"Regexp","o":0,"s":"F|M"}
+        }
+      },
+      "location": {
+        "city": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "London"
+        },
+        "country": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "UK"
+        },
+        "post_code": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 3000
+        }
+      },
+      "eligibility": {
+        "available": {
+          "json_class": "Pact::SomethingLike",
+          "contents": true
+        },
+        "previously_married": {
+          "json_class": "Pact::SomethingLike",
+          "contents": false
+        }
+      },
+      "interests": {
+        "json_class": "Pact::ArrayLike",
+        "contents": "walks in the garden/meadow",
+        "min": 1
+      }
+    }
+  }
+}
+D, [2018-09-25T17:14:54.477893 #5879] DEBUG -- : {
+  "description": "a request for an account with ID 100",
+  "providerState": "Has no account",
+  "request": {
+    "method": "GET",
+    "path": "/accounts/100"
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+    }
+  }
+}
+I, [2018-09-25T17:14:54.480648 #5879]  INFO -- : Received request GET /accounts/available
+D, [2018-09-25T17:14:54.480752 #5879] DEBUG -- : {
+  "path": "/accounts/available",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2018-09-25T17:14:54.481035 #5879]  INFO -- : Found matching response for GET /accounts/available
+D, [2018-09-25T17:14:54.481259 #5879] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "first_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "John"
+      },
+      "last_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Doe"
+      },
+      "bank": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Lloyds"
+      },
+      "age": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 21
+      },
+      "gender": {
+        "json_class": "Pact::Term",
+        "data": {
+          "generate": "M",
+          "matcher": {
+            "json_class": "Regexp",
+            "o": 0,
+            "s": "F|M"
+          }
+        }
+      },
+      "location": {
+        "city": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "London"
+        },
+        "country": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "UK"
+        },
+        "post_code": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 3000
+        }
+      },
+      "eligibility": {
+        "available": {
+          "json_class": "Pact::SomethingLike",
+          "contents": true
+        },
+        "previously_married": {
+          "json_class": "Pact::SomethingLike",
+          "contents": false
+        }
+      },
+      "interests": {
+        "json_class": "Pact::ArrayLike",
+        "contents": "walks in the garden/meadow",
+        "min": 1
+      }
+    },
+    "min": 2
+  }
+}
+I, [2018-09-25T17:14:54.491370 #5879]  INFO -- : Received request GET /accounts/1
+D, [2018-09-25T17:14:54.491477 #5879] DEBUG -- : {
+  "path": "/accounts/1",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2018-09-25T17:14:54.491669 #5879]  INFO -- : Found matching response for GET /accounts/1
+D, [2018-09-25T17:14:54.491882 #5879] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "id": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 1
+    },
+    "first_name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "John"
+    },
+    "last_name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Doe"
+    },
+    "bank": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Lloyds"
+    },
+    "age": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 21
+    },
+    "gender": {
+      "json_class": "Pact::Term",
+      "data": {
+        "generate": "M",
+        "matcher": {
+          "json_class": "Regexp",
+          "o": 0,
+          "s": "F|M"
+        }
+      }
+    },
+    "location": {
+      "city": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "London"
+      },
+      "country": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "UK"
+      },
+      "post_code": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 3000
+      }
+    },
+    "eligibility": {
+      "available": {
+        "json_class": "Pact::SomethingLike",
+        "contents": true
+      },
+      "previously_married": {
+        "json_class": "Pact::SomethingLike",
+        "contents": false
+      }
+    },
+    "interests": {
+      "json_class": "Pact::ArrayLike",
+      "contents": "walks in the garden/meadow",
+      "min": 1
+    }
+  }
+}
+I, [2018-09-25T17:14:54.497077 #5879]  INFO -- : Received request GET /accounts/100
+D, [2018-09-25T17:14:54.497176 #5879] DEBUG -- : {
+  "path": "/accounts/100",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2018-09-25T17:14:54.497318 #5879]  INFO -- : Found matching response for GET /accounts/100
+D, [2018-09-25T17:14:54.497400 #5879] DEBUG -- : {
+  "status": 404,
+  "headers": {
+  }
+}
+I, [2018-09-25T17:14:54.503046 #5879]  INFO -- : Writing pact with details {:consumer=>{:name=>"new-consumer-services"}, :provider=>{:name=>"new-provider-services"}, :pactfile_write_mode=>"overwrite"}
+I, [2018-09-25T17:14:54.503212 #5879]  INFO -- : Writing pact for new-provider-services to /Users/abhrai2/Documents/lloyds/pact-demo/pacts/new-consumer-services-new-provider-services.json

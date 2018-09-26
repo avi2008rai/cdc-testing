@@ -1,0 +1,61 @@
+[{
+  "first_name": "John",
+  "last_name": "Doe",
+  "bank": "Lloyds",
+  "age":  21,
+  "gender": "M",
+  "location": {
+    "city": "London",
+    "country": "UK",
+    "post_code": 3000
+  },
+  "eligibility": {
+    "available": true,
+    "previously_married": false
+  },
+  "interests": [
+    "walks in the garden/meadow",
+    "Eating in the restaurants",
+    "parkour"
+  ]
+},
+{
+  "first_name": "Callum",
+  "bank": "Lloyds",
+  "last_name": "Finch",
+  "age":  27,
+  "gender": "F",
+  "location": {
+    "city": "London",
+    "country": "UK",
+    "post_code": 3000
+  },
+  "eligibility": {
+    "available": true,
+    "previously_married": true
+  },
+  "interests": [
+    "walks in the garden/meadow",
+    "parkour"
+  ]
+},
+{
+  "first_name": "Barnaby",
+  "last_name": "Cantwaittobeking",
+  "bank": "Lloyds",
+  "age":  4,
+  "gender": "M",
+  "location": {
+    "city": "London",
+    "country": "UK",
+    "post_code": 3000
+  },
+  "eligibility": {
+    "available": true,
+    "previously_married": true
+  },
+  "interests": [
+    "walks in the garden/meadow",
+    "parkour"
+  ]
+}]
